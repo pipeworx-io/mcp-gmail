@@ -2,21 +2,21 @@
 
 Gmail MCP Pack
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `gmail_list_messages` | List messages in the user\'s Gmail inbox. Optionally filter with a search query. Returns message IDs and thread IDs. |
-| `gmail_get_message` | Get a specific Gmail message by ID. Returns full message details including headers, snippet, body, and labels. |
-| `gmail_search` | Search Gmail messages using Gmail query syntax. Supports operators like from:, to:, subject:, has:attachment, after:, before:, is:unread, label:, etc. |
-| `gmail_send` | Send an email from the authenticated Gmail account. |
-| `gmail_list_labels` | List all labels in the user\'s Gmail account, including system labels (INBOX, SENT, TRASH, etc.) and user-created labels. |
+| `gmail_list_messages` | List messages in your inbox with optional filtering by label or read status. Returns message IDs, thread IDs, and preview text. Use gmail_search for complex queries like date ranges or attachments. |
+| `gmail_get_message` | Fetch full email details by message ID. Returns headers, subject, body text, sender, recipients, attachments, and applied labels. |
+| `gmail_search` | Search emails using Gmail query syntax (e.g., \'from:sender@example.com\', \'subject:invoice\', \'has:attachment\', \'after:2024/01/01\', \'is:unread\'). Returns matching message IDs. |
+| `gmail_send` | Send an email with recipient, subject, and body text. Optionally add CC, BCC, reply-to address, and file attachments. |
+| `gmail_list_labels` | Get all your labels including system folders (INBOX, SENT, TRASH, DRAFTS) and custom labels. Returns label names and IDs for filtering or organizing. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -28,11 +28,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use gmail
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Gmail data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
