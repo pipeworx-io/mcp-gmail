@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-gmail",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Gmail MCP Pack",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-ab8deec9145548047f20ee6e626f3ffa8c63b00d4ac6bb2dd0fe8f3c9c7711c7",
-    "sourceCommit": "76aa8f5d9b5dc2f665563030647c68e661478864"
+    "sourceHash": "v1-83662e2befbdd8b324dccecfd90ca8a8adecacb4781eec8602b3854bb93ca694",
+    "sourceCommit": "1064560fd9dcd0d6fc2606298c2ba244b3a1fbeb"
   }
 }
