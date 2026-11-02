@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-gmail",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Gmail MCP Pack",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "gmail",
     "gatewaySlug": "gmail",
-    "sourceHash": "v1-498db8b5d7cd327b2992f9c77b7a20e6b1d51ec2c0bcfb9e78685c744fa250e1",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-62a1639cf2985cd8ca2250ac2d57b3a3f0a36d0e066ce82cfeb8e699156bbff0",
+    "sourceCommit": "030233f6b150a38a44421f88a5fcbad123f0fea8"
   }
 }
